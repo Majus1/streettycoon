@@ -1,0 +1,3 @@
+- Continue work on the scrollable section.
+- Make it scroll magic.
+- Make it responsive.
