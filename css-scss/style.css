@@ -10,4 +10,8 @@ body {
   #planet-earth-animation {
     height: 300px;
   }
+}
+
+#scrollable-section {
+  background-color: rgb(4, 36, 53);
 }/*# sourceMappingURL=style.css.map */
