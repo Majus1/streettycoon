@@ -1,0 +1,13 @@
+.test-maj {
+  color: aquamarine;
+}
+
+body {
+  background-color: #02060E;
+}
+
+@media (max-width: 500px) {
+  #planet-earth-animation {
+    height: 300px;
+  }
+}/*# sourceMappingURL=style.css.map */
