@@ -1,3 +1,5 @@
 - Continue work on the scrollable section.
+    - Make the intersection observer look for all 4 sections.
+    - Make the observer work when he sees a section (Show hide image).
 - Make it scroll magic.
 - Make it responsive.
