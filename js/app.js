@@ -32,7 +32,7 @@ const options = {
 const observer = new IntersectionObserver(function(entries, observer){
     entries.forEach(entry => {
         console.log(entry.target);
-        console.log("section four is visible");
+        console.log("section ones is visible");
         relatedImageOne.classList.toggle("d-none");
     });
 }, options);
