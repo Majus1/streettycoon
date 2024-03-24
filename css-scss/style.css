@@ -13,5 +13,9 @@ body {
 }
 
 #scrollable-section-text {
-  background-color: rgb(4, 36, 53);
+  background-color: rgb(15, 53, 73);
+}
+
+#mg-scrolable-image-container {
+  background-color: aqua;
 }/*# sourceMappingURL=style.css.map */
