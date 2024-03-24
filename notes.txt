@@ -3,3 +3,10 @@
     - Make the observer work when he sees a section (Show hide image).
 - Make it scroll magic.
 - Make it responsive.
+
+
+Just some mind notes
+- Majbe you but a iner signal section inside on top of the scrolable area and listen for it
+- Or maybe you could play around a bit with the root margin? Perhaps?
+
+// In both cases above you have one multiple intersection observers observing

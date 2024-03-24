@@ -20,12 +20,14 @@ const relatedImageFour = document.getElementById("TEST_IMG_04");
 // ::: Variables / Related images :::
 
 
-// ::: Inter section observer :::
-
+// ::: Inter section observer for section 1 :::
 // :: Observer options ::
 const options = {
-    threshold: .5,
-    rootMargin: "150px"
+    // threshold: .5,
+    threshold: 1,
+    // threshold: .75,
+    // threshold: .25,
+    rootMargin: "250px"
 };
 // :: Observer options ::
 
@@ -38,8 +40,46 @@ const observer = new IntersectionObserver(function(entries, observer){
 }, options);
 
 observer.observe(sectionOne);
+// ::: Inter section observer for section 1 :::
 
-// ::: Inter section observer :::
+// ::: Inter section observer for section 2 :::
+
+const observer02 = new IntersectionObserver(function(entries, observer02){
+    entries.forEach(entry => {
+        console.log(entry.target);
+        console.log("section two is visible");
+        relatedImageTwo.classList.toggle("d-none");
+    });
+}, options);
+
+observer02.observe(sectionTwo);
+// ::: Inter section observer for section 2 :::
+
+// ::: Inter section observer for section 3 :::
+
+const observer03 = new IntersectionObserver(function(entries, observer03){
+    entries.forEach(entry => {
+        console.log(entry.target);
+        console.log("section three is visible");
+        relatedImageThree.classList.toggle("d-none");
+    });
+}, options);
+
+observer03.observe(sectionThree);
+// ::: Inter section observer for section 3 :::
+
+// ::: Inter section observer for section 4 :::
+
+const observer04 = new IntersectionObserver(function(entries, observer04){
+    entries.forEach(entry => {
+        console.log(entry.target);
+        console.log("section four is visible");
+        relatedImageFour.classList.toggle("d-none");
+    });
+}, options);
+
+observer04.observe(sectionFour);
+// ::: Inter section observer for section 4 :::
 
 
 // ::::: two column based scrolling animation :::::
