@@ -1,6 +1,2 @@
-- Continue work on the scrollable section.
-    - Make smooth css animation for sections to disapear.
-    - Create an outer section that always remains visible and images changes inside.
-- Make it scroll magic.
 - Make it responsive.
 
