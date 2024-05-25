@@ -16,14 +16,120 @@
 <body>
 
 
+    <!-- ::::: Sign in Modal ::::: -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signInModalLabel">Log In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ::: Modal body ::: -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="logInEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="logInEmail" placeholder="Enter your email address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="logInPassword" class="form-label">Password</label>
+                        <input type="email" class="form-control" id="logInPassword" placeholder="Enter your password">
+                    </div>
+                </div>
+                <!-- ::: Modal body ::: -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-bs-target="#forgotPasswordModal"
+                        data-bs-toggle="modal">Forgot password</button>
+                    <button type="button" class="btn btn-secondary" data-bs-target="#registerModal"
+                        data-bs-toggle="modal">Register</button>
+                    <button type="button" class="btn btn-primary">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ::::: Sign in Modal ::::: -->
+
+
+    <!-- ::::: Register Modal ::::: -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ::: Modal body ::: -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="registerPublicUserName" class="form-label">Public username</label>
+                        <input type="text" class="form-control" id="registerPublicUserName"
+                            placeholder="Create your username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="registerEmail"
+                            placeholder="Enter your email address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="registerPassword"
+                            placeholder="Create your password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerRepeatPassword" class="form-label">Repeat password</label>
+                        <input type="text" class="form-control" id="registerRepeatPassword"
+                            placeholder="Re-type your password">
+                    </div>
+                </div>
+                <!-- ::: Modal body ::: -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#signInModal"
+                        data-bs-toggle="modal">Log in</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ::::: Register Modal ::::: -->
+
+
+    <!-- ::::: Forgot password Modal ::::: -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="forgotPasswordModalLabel">Forgot your email?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ::: Modal body ::: -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="registerEmail"
+                            placeholder="Enter your email address">
+                    </div>
+                </div>
+                <!-- ::: Modal body ::: -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ::::: Forgot password Modal ::::: -->
+
+
     <!-- ::::: Hero section ::::: -->
     <div class="container-fluid d-flex flex-column align-items-start position-relative  min-vh-100 " id="hero-section">
         <div class="container-lg z-3 d-flex flex-column align-items-center  text-center  mt-md-5 pt-md-5">
             <h1 class="display-1 text-light fw-bold  mt-5 mb-0 pt-5">StreetTycoon</h1>
             <h3 class="col-10  text-secondary  mb-5">Massive Multiplayer Online Incremental game</h3>
             <div class="row  d-flex flex-column   align-items-center justify-content-center">
-                <h2 class="lead col-11 col-md-7 text-light">Welcome to StreetTycoon! Buy streets and buildings, earn rent, and expand your empire. Trade, sabotage, and bid in real-time auctions to dominate the city. Get ready for a thrilling journey to financial success!</h2>
-                <button type="button" class="btn btn-primary  col-10 col-md-3  mt-4 p-3  btn-lg">JUMP IN</button>
+                <h2 class="lead col-11 col-md-7 text-light">Welcome to StreetTycoon! Buy streets and buildings, earn
+                    rent, and expand your empire. Trade, sabotage, and bid in real-time auctions to dominate the city.
+                    Get ready for a thrilling journey to financial success!</h2>
+                <button type="button" class="btn btn-primary  col-10 col-md-3  mt-4 p-3  btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#signInModal">JUMP IN</button>
             </div>
         </div>
         <!-- Planet earth animation -->
@@ -51,7 +157,8 @@
         <!-- :::: Scrollable text section :::: -->
         <div class="col 12 col-mg-6 d-flex flex-column justify-content-center" id="scrollable-section-text">
             <!-- ::: Section 01 ::: -->
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0" id="section-01">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0"
+                id="section-01">
                 <!--  Text  -->
                 <div class="mg-text-block  d-flex flex-column align-items-center  mt-5 pt-5 mt-md-0 pt-md-0">
                     <h1 class="display-4 text-light  col-11 col-md-7  mb-2">Building Your Empire</h1>
@@ -65,75 +172,93 @@
                 <!--  Text  -->
                 <!-- Mobile image -->
                 <div class="mobile-functionality-image  d-md-none  mt-5">
-                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_01.gif" alt="_ENTER_">
+                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_01.webm"
+                        alt="_ENTER_">
                 </div>
                 <!-- Mobile image -->
             </div>
             <!-- ::: Section 01 ::: -->
             <!-- ::: Section 02 ::: -->
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0" id="section-02">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0"
+                id="section-02">
                 <!--  Text  -->
                 <div class="mg-text-block  d-flex flex-column align-items-center  mt-5 pt-5 mt-md-0 pt-md-0">
                     <h1 class="display-4 text-light  col-11 col-md-7  mb-2">Rise to the Top</h1>
-                    <h3 class="h5 text-secondary  col-11 col-md-7  mb-3">Strategize, Compete, and Conquer in the Urban Arena
+                    <h3 class="h5 text-secondary  col-11 col-md-7  mb-3">Strategize, Compete, and Conquer in the Urban
+                        Arena
                     </h3>
-                    <h2 class="lead  col-11 col-md-7  text-light">Every player begins on equal footing with one shared objective to become the StreetTycoon. Acquire streets and buildings to generate rent, build your empire.</h2>
+                    <h2 class="lead  col-11 col-md-7  text-light">Every player begins on equal footing with one shared
+                        objective to become the StreetTycoon. Acquire streets and buildings to generate rent, build your
+                        empire.</h2>
                 </div>
                 <!--  Text  -->
                 <!-- Mobile image -->
                 <div class="mobile-functionality-image  d-md-none  mt-5">
-                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_02.gif" alt="_ENTER_">
+                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_02.webm"
+                        alt="_ENTER_">
                 </div>
                 <!-- Mobile image -->
             </div>
             <!-- ::: Section 02 ::: -->
             <!-- ::: Section 03 ::: -->
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0" id="section-03">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0"
+                id="section-03">
                 <!--  Text  -->
                 <div class="mg-text-block  d-flex flex-column align-items-center  mt-5 pt-5 mt-md-0 pt-md-0">
                     <h1 class="display-4 text-light  col-11 col-md-7  mb-2">Expand and Prosper</h1>
                     <h3 class="h5 text-secondary  col-11 col-md-7  mb-3">Unlock Bonuses and Achieve Tycoon Status
                     </h3>
-                    <h2 class="lead  col-11 col-md-7  text-light">As your empire expands, gain bonuses by buying intersecting streets. Reach a certain net worth to unlock the Tycoon Bonus, boosting all rent payouts.</h2>
+                    <h2 class="lead  col-11 col-md-7  text-light">As your empire expands, gain bonuses by buying
+                        intersecting streets. Reach a certain net worth to unlock the Tycoon Bonus, boosting all rent
+                        payouts.</h2>
                 </div>
                 <!--  Text  -->
                 <!-- Mobile image -->
                 <div class="mobile-functionality-image  d-md-none  mt-5">
-                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_03.gif" alt="_ENTER_">
+                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_03.webm"
+                        alt="_ENTER_">
                 </div>
                 <!-- Mobile image -->
             </div>
             <!-- ::: Section 03 ::: -->
             <!-- ::: Section 04 ::: -->
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0" id="section-04">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0"
+                id="section-04">
                 <!--  Text  -->
                 <div class="mg-text-block  d-flex flex-column align-items-center  mt-5 pt-5 mt-md-0 pt-md-0">
                     <h1 class="display-4 text-light  col-11 col-md-7  mb-2">Sabotage & Negotiate</h1>
                     <h3 class="h5 text-secondary  col-11 col-md-7  mb-3">Outwit Rivals and Forge Alliances
                     </h3>
-                    <h2 class="lead  col-11 col-md-7  text-light">Someone bought your favorite street? You can build a sabotaging factory and it’ll stop earning them rent. You can also send them an offer.</h2>
+                    <h2 class="lead  col-11 col-md-7  text-light">Someone bought your favorite street? You can build a
+                        sabotaging factory and it’ll stop earning them rent. You can also send them an offer.</h2>
                 </div>
                 <!--  Text  -->
                 <!-- Mobile image -->
                 <div class="mobile-functionality-image  d-md-none  mt-5">
-                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_04.gif" alt="_ENTER_">
+                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_04.webm"
+                        alt="_ENTER_">
                 </div>
                 <!-- Mobile image -->
             </div>
             <!-- ::: Section 04 ::: -->
             <!-- ::: Section 04 ::: -->
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0" id="section-05">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center  min-vh-100  ms-3 me-3  ms-md-0 me-md-0"
+                id="section-05">
                 <!--  Text  -->
                 <div class="mg-text-block  d-flex flex-column align-items-center  mt-5 pt-5 mt-md-0 pt-md-0">
                     <h1 class="display-4 text-light  col-11 col-md-7  mb-2">Bid to Win</h1>
-                    <h3 class="h5 text-secondary  col-11 col-md-7  mb-3">Auctions for Victory! Outbid, Outsmart, and Conquer
+                    <h3 class="h5 text-secondary  col-11 col-md-7  mb-3">Auctions for Victory! Outbid, Outsmart, and
+                        Conquer
                     </h3>
-                    <h2 class="lead  col-11 col-md-7  text-light">Having secured, say, Wall Street as your initial purchase, you now have the opportunity to auction it off. If there's demand, you stand to make a profitable sale.</h2>
+                    <h2 class="lead  col-11 col-md-7  text-light">Having secured, say, Wall Street as your initial
+                        purchase, you now have the opportunity to auction it off. If there's demand, you stand to make a
+                        profitable sale.</h2>
                 </div>
                 <!--  Text  -->
                 <!-- Mobile image -->s
                 <div class="mobile-functionality-image  d-md-none  mt-5">
-                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_05.gif" alt="_ENTER_">
+                    <img class="functionaliy-image-mobile" src="./assets/images/functionality-section_05.webm"
+                        alt="_ENTER_">
                 </div>
                 <!-- Mobile image -->
             </div>
@@ -142,14 +267,20 @@
         <!-- :::: Scrollable text section :::: -->
 
         <!-- :::: Scrollable image section :::: -->
-        <div class="col-6 d-none d-md-flex flex-column justify-content-center  min-vh-100  sticky-top" id="scrollable-section-text">
+        <div class="col-6 d-none d-md-flex flex-column justify-content-center  min-vh-100  sticky-top"
+            id="scrollable-section-text">
             <!-- ::: Image wrapper ::: -->
             <div class="d-flex align-items-center justify-content-center min-vh-100" id="mg-scrolable-image-container">
-                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_01.gif" alt="_ENTER_" id="TEST_IMG_01">
-                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_02.gif" alt="_ENTER_" id="TEST_IMG_02">
-                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_03.gif" alt="_ENTER_" id="TEST_IMG_03">
-                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_04.gif" alt="_ENTER_" id="TEST_IMG_04">
-                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_05.gif" alt="_ENTER_" id="TEST_IMG_05">
+                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_01.webm"
+                    alt="_ENTER_" id="TEST_IMG_01">
+                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_02.webm"
+                    alt="_ENTER_" id="TEST_IMG_02">
+                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_03.webm"
+                    alt="_ENTER_" id="TEST_IMG_03">
+                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_04.webm"
+                    alt="_ENTER_" id="TEST_IMG_04">
+                <img class="functionaliy-image-desktop" src="./assets/images/functionality-section_05.webm"
+                    alt="_ENTER_" id="TEST_IMG_05">
             </div>
             <!-- ::: Image wrapper ::: -->
         </div>
@@ -161,13 +292,17 @@
     <!-- ::::: Call to action section ::::: -->
     <div class="mg-call-to-aciont-section container-fluid d-flex flex-column align-items-start  position-relative">
         <!-- ::: Eye candy img ::: -->
-        <img class="img-fluid  d-none d-md-block  position-absolute top-100 start-50 translate-middle" src="./assets/images/eye-candy-img_04.png" alt="">
+        <img class="img-fluid  d-none d-md-block  position-absolute top-100 start-50 translate-middle"
+            src="./assets/images/city-skyline.png" alt="">
         <!-- ::: Eye candy img ::: -->
         <!-- ::: Content block ::: -->
-        <div class="mg-cta-container shadow shadow-lg  container-lg d-flex flex-column flex-md-row align-items-center justify-content-between  z-3  col-md-10  mt-5 mb-5">
-            <img class="img-fluid  d-block d-md-none pb-4" src="./assets/images/eye-candy-img_04.png" alt="">
-            <p class="h1  text-light col-md-7">Jump into a lively virtual world where strategists and completionists shape StreetTycoon's vibrant community.</p>
-            <button type="button" class="btn btn-primary  col-12 col-md-3  mt-3 mt-mb-0 p-4  btn-lg">JUMP IN</button>
+        <div
+            class="mg-cta-container shadow shadow-lg  container-lg d-flex flex-column flex-md-row align-items-center justify-content-between  z-3  col-md-10  mt-5 mb-5">
+            <img class="img-fluid  d-block d-md-none pb-4" src="./assets/images/city-skyline.png" alt="">
+            <p class="h1  text-light col-md-7">Jump into a lively virtual world where strategists and completionists
+                shape StreetTycoon's vibrant community.</p>
+            <button type="button" class="btn btn-primary  col-12 col-md-3  mt-3 mt-mb-0 p-4  btn-lg" data-bs-toggle="modal"
+            data-bs-target="#signInModal">JUMP IN</button>
         </div>
         <!-- ::: Content block ::: -->
     </div>
@@ -175,16 +310,18 @@
 
 
     <!-- ::::: Footeer ::::: -->
-    <div class="mg-footer shadow shadow-lg  container-fluid d-flex flex-column align-items-start  position-relative  pt-5 pb-5 mt-5">
+    <div
+        class="mg-footer shadow shadow-lg  container-fluid d-flex flex-column align-items-start  position-relative  pt-5 pb-5 mt-5">
         <!-- ::: Content blocks ::: -->
-        <div class="container-lg d-flex flex-column flex-md-row align-items-start justify-content-between  z-3  pt-5 pb-5">
+        <div
+            class="container-lg d-flex flex-column flex-md-row align-items-start justify-content-between  z-3  pt-5 pb-5">
             <!-- Block -->
             <div class="col-12 col-md-5">
                 <p class="display-3  mb-0  text-secondary">Stay updated with</p>
                 <p class="display-3  mb-0  fw-bold text-light">StreetTycoon</p>
                 <!--  Newsletter input  -->
                 <div class="mg-newsletter-input  d-flex flex-row  mt-5 mb-5 pt-3 pb-3">
-                    <input type="email"  placeholder="enter your email" class="ps-3 ps-md-4  col col-md-8">
+                    <input type="email" placeholder="enter your email" class="ps-3 ps-md-4  col col-md-8">
                     <button class="btn btn-primary  colr-3 col-md-4  btn-lg  pt-3 pb-3">Subscribe</button>
                 </div>
                 <!--  Newsletter input  -->
@@ -194,23 +331,47 @@
             <div class="col-12 col-md-2  text-light  d-flex flex-column  pb-5 pb-md-0">
                 <p class="h3  mb-4">Resources</p>
                 <!-- <div class="resource"><a href="https://decentraland.org/" class="text-light"><p>Documentations</p></a></div> -->
-                <div class="resource"><a href="#" class="text-light"><p>FAQ</p></a></div>
-                <div class="resource"><a href="terms-of-service.html" class="text-light"><p>Terms of Service</p></a></div>
-                <div class="resource"><a href="privacy-policy.html" class="text-light"><p>Privacy Policy</p></a></div>
+                <div class="resource"><a href="#" class="text-light">
+                        <p>FAQ</p>
+                    </a></div>
+                <div class="resource"><a href="terms-of-service.html" class="text-light">
+                        <p>Terms of Service</p>
+                    </a></div>
+                <div class="resource"><a href="privacy-policy.html" class="text-light">
+                        <p>Privacy Policy</p>
+                    </a></div>
             </div>
             <!-- Block -->
             <!-- Block -->
             <div class="col-12 col-md-2 text-light  d-flex flex-column  pb-5 pb-md-0">
                 <p class="h3  mb-4">Connect</p>
                 <!-- Resource 01 -->
-                <div class="resource"><a href="https://decentraland.org/" class="d-flex  flex-row  align-items-start gap-2  text-light"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>facebook</title><g fill="none" class="nc-icon-wrapper"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" fill="#f8f9fa"></path></g></svg><p class="m-0 pb-3">Facebook</p></a></div>
+                <div class="resource"><a href="https://decentraland.org/"
+                        class="d-flex  flex-row  align-items-start gap-2  text-light"><svg width="24" height="24"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>facebook</title>
+                            <g fill="none" class="nc-icon-wrapper">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                                    fill="#f8f9fa"></path>
+                            </g>
+                        </svg>
+                        <p class="m-0 pb-3">Facebook</p>
+                    </a></div>
                 <!-- Resource 01 -->
                 <!-- Resource 02 -->
-                <div class="resource"><a href="https://decentraland.org/" class="d-flex  flex-row  align-items-start gap-2  text-light"><svg class="nc-icon-wrapper" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.8428 15.1515L4.40703 22.5H0.842283L9.17778 12.978L10.8428 15.1515Z" fill="#F8F9FA"/>
-                    <path d="M12.7883 8.241L18.681 1.5H22.2435L14.4383 10.4265L12.7883 8.241Z" fill="#F8F9FA"/>
-                    <path d="M23.616 22.5H16.4468L0.384033 1.5H7.73478L23.616 22.5ZM17.43 20.3678H19.404L6.66228 3.5205H4.54428L17.43 20.3678Z" fill="#F8F9FA"/>
-                    </svg><p class="m-0 pb-3">X account</p></a></div>
+                <div class="resource"><a href="https://decentraland.org/"
+                        class="d-flex  flex-row  align-items-start gap-2  text-light"><svg class="nc-icon-wrapper"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8428 15.1515L4.40703 22.5H0.842283L9.17778 12.978L10.8428 15.1515Z"
+                                fill="#F8F9FA" />
+                            <path d="M12.7883 8.241L18.681 1.5H22.2435L14.4383 10.4265L12.7883 8.241Z" fill="#F8F9FA" />
+                            <path
+                                d="M23.616 22.5H16.4468L0.384033 1.5H7.73478L23.616 22.5ZM17.43 20.3678H19.404L6.66228 3.5205H4.54428L17.43 20.3678Z"
+                                fill="#F8F9FA" />
+                        </svg>
+                        <p class="m-0 pb-3">X account</p>
+                    </a></div>
                 <!-- Resource 02 -->
             </div>
             <!-- Block -->
